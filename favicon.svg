@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="aywinGrad" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <!-- Background icon frame -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="#334155" stroke-width="2"/>
+  
+  <!-- "A" Glyph / Prism Reflection -->
+  <path d="M20 46L32 18L44 46" stroke="url(#aywinGrad)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M25 36H39" stroke="url(#aywinGrad)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Neural / Quantum Core Node -->
+  <circle cx="32" cy="30" r="3.5" fill="#38BDF8"/>
+</svg>
