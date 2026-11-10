@@ -4,7 +4,7 @@ Sitio web oficial de **Aywin Software** — Ingeniería de software, desarrollo 
 
 🌐 **Sitio Web Oficial:** [https://aywin.cl](https://aywin.cl)  
 ✉️ **Contacto:** [contacto@aywin.cl](mailto:contacto@aywin.cl)  
-📍 **Ubicación:** Chile  
+📍 **Ubicación:** Concepción, Región del Biobío, Chile  
 
 ---
 
