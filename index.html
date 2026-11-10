@@ -9,7 +9,93 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <style>
+        /* Estilos críticos para menú móvil y prevención de desborde */
+        .nav-toggle {
+            display: none;
+        }
+        @media (max-width: 860px) {
+            html, body {
+                overflow-x: hidden !important;
+                max-width: 100vw !important;
+            }
+            .site-header {
+                position: sticky;
+                top: 0;
+                z-index: 999;
+                background: #141A28;
+                border-bottom: 1px solid #2F3E5C;
+            }
+            .nav-container {
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 16px;
+            }
+            .nav-toggle {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                width: 42px;
+                height: 42px;
+                background: #1B2335;
+                border: 1px solid #475B85;
+                border-radius: 8px;
+                cursor: pointer;
+                padding: 0;
+                z-index: 1000;
+            }
+            .nav-toggle span {
+                display: block;
+                width: 20px;
+                height: 2px;
+                background-color: #FFFFFF;
+                border-radius: 2px;
+                transition: all 0.25s ease;
+            }
+            .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .nav-toggle.open span:nth-child(2) { opacity: 0; }
+            .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+            .nav-links {
+                display: none !important;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                background: #141A28;
+                border-bottom: 1px solid #2F3E5C;
+                flex-direction: column;
+                padding: 16px 20px 24px;
+                gap: 14px;
+                box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+            }
+            .nav-links.active {
+                display: flex !important;
+            }
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                color: #CBD5E1;
+                text-decoration: none;
+                font-size: 1.05rem;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+            .nav-links .btn-nav {
+                text-align: center;
+                margin-top: 6px;
+                padding: 12px;
+                border: 1px solid #38BDF8;
+                border-radius: 8px;
+                background: rgba(56, 189, 248, 0.15);
+                color: #38BDF8 !important;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -121,7 +207,26 @@
 
             <div class="portfolio-grid">
 
-                <!-- CARD 1: SUBTRACK -->
+                <!-- CARD 1: AITA-QA -->
+                <div class="portfolio-card">
+                    <div class="card-meta">
+                        <span class="category-pill">Agentes Autónomos & QA</span>
+                        <span class="platform-pill">CLI + Streamlit Web</span>
+                    </div>
+                    <h3>AITA-QA</h3>
+                    <p class="card-subtitle">Ecosistema Agéntico de QA, Revisión Autónoma con IA & Testing Playwright</p>
+                    <p class="card-description">
+                        Suite integral de aseguramiento de calidad impulsada por agentes autónomos de IA (Claude, Gemini y modelos locales). Conecta Jira y GitLab con Playwright para realizar triage inteligente de entregas, auditoría de código con captura de evidencia real, generación automática de Page Object Models (POM) y ejecución de pruebas con auto-reparación (self-healing), gobernando el ciclo pre-producción con cero regresiones.
+                    </p>
+                    <div class="card-badges">
+                        <span>Agentes Autónomos & Skills</span>
+                        <span>Multi-LLM (Claude / Gemini / Ollama)</span>
+                        <span>Playwright + Self-Healing</span>
+                        <span>Jira & GitLab Governance</span>
+                    </div>
+                </div>
+
+                <!-- CARD 2: SUBTRACK -->
                 <div class="portfolio-card">
                     <div class="card-meta">
                         <span class="category-pill">Finanzas & Utilidades</span>
@@ -140,7 +245,7 @@
                     </div>
                 </div>
 
-                <!-- CARD 2: HOME LIBRARY -->
+                <!-- CARD 3: HOME LIBRARY -->
                 <div class="portfolio-card">
                     <div class="card-meta">
                         <span class="category-pill">Organización & Inventario</span>
@@ -158,7 +263,7 @@
                     </div>
                 </div>
 
-                <!-- CARD 3: BREATHE FLOW -->
+                <!-- CARD 4: BREATHE FLOW -->
                 <div class="portfolio-card">
                     <div class="card-meta">
                         <span class="category-pill">Salud Digital & Bienestar</span>
@@ -173,25 +278,6 @@
                         <span>Salud Digital</span>
                         <span>Respuesta Háptica</span>
                         <span>Audio DSP</span>
-                    </div>
-                </div>
-
-                <!-- CARD 4: AITA-QA -->
-                <div class="portfolio-card">
-                    <div class="card-meta">
-                        <span class="category-pill">Enterprise QA & IA</span>
-                        <span class="platform-pill">CLI + Web App</span>
-                    </div>
-                    <h3>AITA-QA</h3>
-                    <p class="card-subtitle">Asistente Inteligente de QA y Automatización de Pruebas</p>
-                    <p class="card-description">
-                        Suite de ingeniería de calidad asistida por IA que conecta Jira y GitLab con Playwright. Transforma issues y especificaciones en Page Object Models (POM), genera scripts automatizados con selectores reales, aplica self-healing ante cambios de UI y publica reportes ejecutivos.
-                    </p>
-                    <div class="card-badges">
-                        <span>Playwright + LLMs</span>
-                        <span>Jira & GitLab API</span>
-                        <span>Self-Healing Tests</span>
-                        <span>Streamlit UI</span>
                     </div>
                 </div>
 
