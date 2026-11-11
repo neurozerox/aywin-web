@@ -83,9 +83,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <script src="i18n.js" defer></script>
     <style>
-        /* Estilos críticos para menú móvil y prevención de desborde */
+        /* Estilos críticos para selector de idioma, menú móvil y prevención de desborde */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            padding: 4px 10px;
+            background: #1B2335;
+            border: 1px solid #475B85;
+            border-radius: 999px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #94A3B8;
+            font-family: inherit;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 2px 5px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover {
+            color: #FFFFFF;
+        }
+        .lang-btn.active {
+            color: #38BDF8;
+            font-weight: 800;
+        }
+        .lang-divider {
+            color: #2F3E5C;
+            font-size: 0.72rem;
+            user-select: none;
+        }
         .nav-toggle {
             display: none;
         }
@@ -107,6 +146,18 @@
                 align-items: center;
                 justify-content: space-between;
                 padding: 0 16px;
+            }
+            .nav-actions {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .lang-switch {
+                padding: 3px 8px;
+            }
+            .lang-btn {
+                font-size: 0.75rem;
+                padding: 1px 4px;
             }
             .nav-toggle {
                 display: flex !important;
@@ -188,17 +239,24 @@
                 <span class="brand-text">AYWIN <span>SOFTWARE</span></span>
             </a>
             <nav class="nav-links" id="navLinks">
-                <a href="#servicios">Servicios</a>
-                <a href="#productos">Productos Propios</a>
-                <a href="#ingenieria">Ingeniería & IA</a>
-                <a href="privacy.html">Privacidad</a>
-                <a href="#contacto" class="btn-nav">Contactar</a>
+                <a href="#servicios" data-i18n="nav.services">Servicios</a>
+                <a href="#productos" data-i18n="nav.products">Productos Propios</a>
+                <a href="#ingenieria" data-i18n="nav.engineering">Ingeniería & IA</a>
+                <a href="privacy.html" data-i18n="nav.privacy">Privacidad</a>
+                <a href="#contacto" class="btn-nav" data-i18n="nav.contact">Contactar</a>
             </nav>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <div class="lang-switch" id="langSwitch" aria-label="Cambiar idioma / Switch language">
+                    <button type="button" class="lang-btn active" data-lang="es" title="Español">ES</button>
+                    <span class="lang-divider">|</span>
+                    <button type="button" class="lang-btn" data-lang="en" title="English">EN</button>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -206,27 +264,27 @@
     <section id="inicio" class="hero-section">
         <div class="container hero-content">
             <div class="badge-chip">
-                <span class="status-indicator"></span> Ingeniería de Software & QA • Concepción, Chile
+                <span class="status-indicator"></span> <span data-i18n="hero.badge">Ingeniería de Software & QA • Concepción, Chile</span>
             </div>
             <h1 class="hero-title">
-                Ingeniería de software robusta, <br>
-                <span class="gradient-text">potenciada por Inteligencia Artificial.</span>
+                <span data-i18n="hero.title_p1">Ingeniería de software robusta,</span> <br>
+                <span class="gradient-text" data-i18n="hero.title_p2">potenciada por Inteligencia Artificial.</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
                 Con más de 17 años de trayectoria liderando desarrollo de software, gestión de proyectos y aseguramiento de calidad (QA), creamos aplicaciones móviles, sistemas a medida y soluciones digitales con velocidad moderna y solidez técnica.
             </p>
             <div class="hero-actions">
-                <a href="#contacto" class="btn btn-primary">Iniciar un Proyecto</a>
-                <a href="#productos" class="btn btn-secondary">Ver Desarrollos</a>
+                <a href="#contacto" class="btn btn-primary" data-i18n="hero.btn_project">Iniciar un Proyecto</a>
+                <a href="#productos" class="btn btn-secondary" data-i18n="hero.btn_portfolio">Ver Desarrollos</a>
             </div>
             <div class="credentials-strip">
-                <span class="credential-tag">17+ Años de Experiencia en la Industria</span>
+                <span class="credential-tag" data-i18n="hero.cred_years">17+ Años de Experiencia en la Industria</span>
                 <span class="dot">•</span>
-                <span>Liderazgo Técnico & Gestión de Proyectos</span>
+                <span data-i18n="hero.cred_leadership">Liderazgo Técnico & Gestión de Proyectos</span>
                 <span class="dot">•</span>
-                <span>Cultura Integral de QA & Desarrollo</span>
+                <span data-i18n="hero.cred_qa">Cultura Integral de QA & Desarrollo</span>
                 <span class="dot">•</span>
-                <span>Desarrollo Acelerado por IA</span>
+                <span data-i18n="hero.cred_ai">Desarrollo Acelerado por IA</span>
             </div>
         </div>
     </section>
@@ -235,35 +293,35 @@
     <section id="servicios" class="services-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-tag">SERVICIOS & CONSULTORÍA</span>
-                <h2>Soluciones Tecnológicas a Medida</h2>
-                <p>Acompañamos todo el ciclo de vida del software: desde la definición del producto y la arquitectura hasta el control de calidad y despliegue.</p>
+                <span class="section-tag" data-i18n="services.tag">SERVICIOS ESPECIALIZADOS</span>
+                <h2 data-i18n="services.title">Soluciones Tecnológicas a Medida</h2>
+                <p data-i18n="services.subtitle">Acompañamos todo el ciclo de vida del software: desde la definición del producto y la arquitectura hasta el control de calidad y despliegue.</p>
             </div>
 
             <div class="services-grid">
                 
                 <div class="service-card">
                     <div class="service-icon-box">📱</div>
-                    <h3>Desarrollo de Aplicaciones Móviles</h3>
-                    <p>Aplicaciones multiplataforma de alta fidelidad (iOS & Android) construidas en Flutter. Interfaces fluidas a 60/120 fps, integración nativa de sensores, consumo óptimo de batería y arquitectura limpia.</p>
+                    <h3 data-i18n="services.mobile.title">Desarrollo de Aplicaciones Móviles</h3>
+                    <p data-i18n="services.mobile.desc">Aplicaciones multiplataforma de alta fidelidad (iOS & Android) construidas en Flutter. Interfaces fluidas a 60/120 fps, integración nativa de sensores, consumo óptimo de batería y arquitectura limpia.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon-box">🧠</div>
-                    <h3>Soluciones Potenciadas por IA</h3>
-                    <p>Integramos herramientas y modelos de frontera (LLMs, automatización y agentes inteligentes) para transformar ideas en sistemas funcionales en tiempos récord, con supervisión técnica rigurosa.</p>
+                    <h3 data-i18n="services.ai.title">Soluciones Potenciadas por IA</h3>
+                    <p data-i18n="services.ai.desc">Integramos herramientas y modelos de frontera (LLMs, automatización y agentes inteligentes) para transformar ideas en sistemas funcionales en tiempos récord, con supervisión técnica rigurosa.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon-box">🛡️</div>
-                    <h3>Aseguramiento de Calidad (QA Lead)</h3>
-                    <p>Diseño de estrategias integrales de calidad de software: pruebas funcionales, cobertura de casos borde y verificación continua para garantizar productos estables y confiables en producción.</p>
+                    <h3 data-i18n="services.qa.title">Aseguramiento de Calidad (QA Lead)</h3>
+                    <p data-i18n="services.qa.desc">Diseño de estrategias integrales de calidad de software: pruebas funcionales, cobertura de casos borde y verificación continua para garantizar productos estables y confiables en producción.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon-box">📋</div>
-                    <h3>Gestión de Proyectos & Consultoría</h3>
-                    <p>Dirección técnica experimentada: estimaciones precisas, comunicación transparente con clientes, metodología ágil y enfoque implacable en entregar valor real de negocio a tiempo.</p>
+                    <h3 data-i18n="services.consulting.title">Gestión de Proyectos & Consultoría</h3>
+                    <p data-i18n="services.consulting.desc">Dirección técnica experimentada: estimaciones precisas, comunicación transparente con clientes, metodología ágil y enfoque implacable en entregar valor real de negocio a tiempo.</p>
                 </div>
 
             </div>
@@ -274,9 +332,9 @@
     <section id="productos" class="portfolio-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="section-tag">I+D Y PRODUCTOS PROPIOS</span>
-                <h2>Desarrollos y Soluciones Publicadas</h2>
-                <p>Muestra de aplicaciones diseñadas y mantenidas internamente para resolver problemas específicos con alta usabilidad.</p>
+                <span class="section-tag" data-i18n="products.tag">I+D Y PRODUCTOS PROPIOS</span>
+                <h2 data-i18n="products.title">Desarrollos y Soluciones Publicadas</h2>
+                <p data-i18n="products.subtitle">Muestra de aplicaciones diseñadas y mantenidas internamente para resolver problemas específicos con alta usabilidad.</p>
             </div>
 
             <div class="portfolio-grid">
@@ -284,74 +342,74 @@
                 <!-- CARD 1: AITA-QA -->
                 <div class="portfolio-card">
                     <div class="card-meta">
-                        <span class="category-pill">Agentes Autónomos & QA</span>
-                        <span class="platform-pill">CLI + Streamlit Web</span>
+                        <span class="category-pill" data-i18n="product.aita.cat">Agentes Autónomos & QA</span>
+                        <span class="platform-pill" data-i18n="product.aita.platform">CLI + Streamlit Web</span>
                     </div>
-                    <h3>AITA-QA</h3>
-                    <p class="card-subtitle">Ecosistema Agéntico de QA, Revisión Autónoma con IA & Testing Playwright</p>
-                    <p class="card-description">
+                    <h3 data-i18n="product.aita.title">AITA-QA</h3>
+                    <p class="card-subtitle" data-i18n="product.aita.subtitle">Ecosistema Agéntico de QA, Revisión Autónoma con IA & Testing Playwright</p>
+                    <p class="card-description" data-i18n="product.aita.desc">
                         Suite integral de aseguramiento de calidad impulsada por agentes autónomos de IA (Claude, Gemini y modelos locales). Conecta Jira y GitLab con Playwright para realizar triage inteligente de entregas, auditoría de código con captura de evidencia real, generación automática de Page Object Models (POM) y ejecución de pruebas con auto-reparación (self-healing), gobernando el ciclo pre-producción con cero regresiones.
                     </p>
                     <div class="card-badges">
-                        <span>Agentes Autónomos & Skills</span>
-                        <span>Multi-LLM (Claude / Gemini / Ollama)</span>
-                        <span>Playwright + Self-Healing</span>
-                        <span>Jira & GitLab Governance</span>
+                        <span data-i18n="product.aita.b1">Agentes Autónomos & Skills</span>
+                        <span data-i18n="product.aita.b2">Multi-LLM (Claude / Gemini / Ollama)</span>
+                        <span data-i18n="product.aita.b3">Playwright + Self-Healing</span>
+                        <span data-i18n="product.aita.b4">Jira & GitLab Governance</span>
                     </div>
                 </div>
 
                 <!-- CARD 2: SUBTRACK -->
                 <div class="portfolio-card">
                     <div class="card-meta">
-                        <span class="category-pill">Finanzas & Utilidades</span>
-                        <span class="platform-pill">Mobile App</span>
+                        <span class="category-pill" data-i18n="product.subtrack.cat">Finanzas & Utilidades</span>
+                        <span class="platform-pill" data-i18n="product.subtrack.platform">Mobile App</span>
                     </div>
-                    <h3>SubTrack</h3>
-                    <p class="card-subtitle">Administrador analítico de suscripciones periódicas</p>
-                    <p class="card-description">
+                    <h3 data-i18n="product.subtrack.title">SubTrack</h3>
+                    <p class="card-subtitle" data-i18n="product.subtrack.subtitle">Administrador analítico de suscripciones periódicas</p>
+                    <p class="card-description" data-i18n="product.subtrack.desc">
                         Plataforma de control financiero para suscripciones y cobros recurrentes. Proyección de gasto mensual y anualizado, calendario inteligente de renovaciones y alertas tempranas de vencimiento.
                     </p>
                     <div class="card-badges">
-                        <span>Flutter</span>
-                        <span>Control Financiero</span>
-                        <span>Offline First</span>
-                        <span>Cero Fuga de Datos</span>
+                        <span data-i18n="product.subtrack.b1">Flutter</span>
+                        <span data-i18n="product.subtrack.b2">Control Financiero</span>
+                        <span data-i18n="product.subtrack.b3">Offline First</span>
+                        <span data-i18n="product.subtrack.b4">Cero Fuga de Datos</span>
                     </div>
                 </div>
 
                 <!-- CARD 3: HOME LIBRARY -->
                 <div class="portfolio-card">
                     <div class="card-meta">
-                        <span class="category-pill">Organización & Inventario</span>
-                        <span class="platform-pill">Mobile App</span>
+                        <span class="category-pill" data-i18n="product.library.cat">Organización & Inventario</span>
+                        <span class="platform-pill" data-i18n="product.library.platform">Mobile App</span>
                     </div>
-                    <h3>Home Library Catalog</h3>
-                    <p class="card-subtitle">Sistema de gestión y catalogación de biblioteca personal</p>
-                    <p class="card-description">
+                    <h3 data-i18n="product.library.title">Home Library Catalog</h3>
+                    <p class="card-subtitle" data-i18n="product.library.subtitle">Sistema de gestión y catalogación de biblioteca personal</p>
+                    <p class="card-description" data-i18n="product.library.desc">
                         Organizador de inventario de libros con registro de metadatos, seguimiento de lecturas activas y módulo de trazabilidad de préstamos a terceros para evitar pérdidas de patrimonio personal.
                     </p>
                     <div class="card-badges">
-                        <span>Gestión de Inventario</span>
-                        <span>SQLite Local</span>
-                        <span>Filtros Dinámicos</span>
+                        <span data-i18n="product.library.b1">Gestión de Inventario</span>
+                        <span data-i18n="product.library.b2">SQLite Local</span>
+                        <span data-i18n="product.library.b3">Filtros Dinámicos</span>
                     </div>
                 </div>
 
                 <!-- CARD 4: BREATHE FLOW -->
                 <div class="portfolio-card">
                     <div class="card-meta">
-                        <span class="category-pill">Salud Digital & Bienestar</span>
-                        <span class="platform-pill">Mobile App</span>
+                        <span class="category-pill" data-i18n="product.breathe.cat">Salud Digital & Bienestar</span>
+                        <span class="platform-pill" data-i18n="product.breathe.platform">Mobile App</span>
                     </div>
-                    <h3>Breathe Flow & Focus</h3>
-                    <p class="card-subtitle">Entrenador biométrico de respiración y concentración</p>
-                    <p class="card-description">
+                    <h3 data-i18n="product.breathe.title">Breathe Flow & Focus</h3>
+                    <p class="card-subtitle" data-i18n="product.breathe.subtitle">Entrenador biométrico de respiración y concentración</p>
+                    <p class="card-description" data-i18n="product.breathe.desc">
                         Herramienta de modulación del sistema nervioso basada en protocolos validados (Pranayama, Box 4x4, 4-7-8). Integra esferas hápticas expansivas y generador de ondas alfa para enfoque prolongado.
                     </p>
                     <div class="card-badges">
-                        <span>Salud Digital</span>
-                        <span>Respuesta Háptica</span>
-                        <span>Audio DSP</span>
+                        <span data-i18n="product.breathe.b1">Salud Digital</span>
+                        <span data-i18n="product.breathe.b2">Respuesta Háptica</span>
+                        <span data-i18n="product.breathe.b3">Audio DSP</span>
                     </div>
                 </div>
 
@@ -364,9 +422,9 @@
         <div class="container">
             <div class="approach-grid">
                 <div class="approach-lead">
-                    <span class="section-tag">EL FACTOR DIFERENCIAL</span>
-                    <h2>Visión 360° del software: del código al negocio</h2>
-                    <p>
+                    <span class="section-tag" data-i18n="diff.tag">EL FACTOR DIFERENCIAL</span>
+                    <h2 data-i18n="diff.title">Visión 360° del software: del código al negocio</h2>
+                    <p data-i18n="diff.lead">
                         No somos programadores aislados improvisando con prompts. Entendemos todo el ciclo de vida de un producto digital: desde la visión de negocio y gestión de equipos hasta la escritura de código limpio y el control de calidad final.
                     </p>
                 </div>
@@ -374,22 +432,22 @@
                     <div class="approach-item">
                         <div class="item-num">01</div>
                         <div>
-                            <h4>Liderazgo Técnico & Gestión de Proyectos</h4>
-                            <p>Experiencia real liderando equipos de desarrollo, tratando directamente con clientes y cumpliendo compromisos de entrega con metodologías probadas.</p>
+                            <h4 data-i18n="diff.item1.title">Liderazgo Técnico & Gestión de Proyectos</h4>
+                            <p data-i18n="diff.item1.desc">Experiencia real liderando equipos de desarrollo, tratando directamente con clientes y cumpliendo compromisos de entrega con metodologías probadas.</p>
                         </div>
                     </div>
                     <div class="approach-item">
                         <div class="item-num">02</div>
                         <div>
-                            <h4>Cultura de Calidad (QA) desde el Origen</h4>
-                            <p>Enfoque de Encargado de QA: cada funcionalidad se diseña pensando en la estabilidad, la usabilidad y la prevención de fallos antes de llegar a producción.</p>
+                            <h4 data-i18n="diff.item2.title">Cultura de Calidad (QA) desde el Origen</h4>
+                            <p data-i18n="diff.item2.desc">Enfoque de Encargado de QA: cada funcionalidad se diseña pensando en la estabilidad, la usabilidad y la prevención de fallos antes de llegar a producción.</p>
                         </div>
                     </div>
                     <div class="approach-item">
                         <div class="item-num">03</div>
                         <div>
-                            <h4>Desarrollo Acelerado con IA Moderna</h4>
-                            <p>Aprovechamos la Inteligencia Artificial como un multiplicador de productividad para entregar software en días en lugar de meses, sin descuidar la arquitectura.</p>
+                            <h4 data-i18n="diff.item3.title">Desarrollo Acelerado con IA Moderna</h4>
+                            <p data-i18n="diff.item3.desc">Aprovechamos la Inteligencia Artificial como un multiplicador de productividad para entregar software en días en lugar de meses, sin descuidar la arquitectura.</p>
                         </div>
                     </div>
                 </div>
@@ -401,15 +459,15 @@
     <section id="contacto" class="contact-section">
         <div class="container">
             <div class="contact-box">
-                <span class="section-tag">CONVERSEMOS</span>
-                <h2>¿Tienes un proyecto, sistema o software en mente?</h2>
-                <p>Ya sea para desarrollar una aplicación móvil, diseñar una solución digital a medida o liderar técnicamente tu proyecto, hablemos.</p>
+                <span class="section-tag" data-i18n="contact.tag">CONVERSEMOS</span>
+                <h2 data-i18n="contact.title">¿Tienes un proyecto, sistema o software en mente?</h2>
+                <p data-i18n="contact.subtitle">Ya sea para desarrollar una aplicación móvil, diseñar una solución digital a medida o liderar técnicamente tu proyecto, hablemos.</p>
                 <div class="contact-action-row">
-                    <a href="mailto:contacto@aywin.cl" class="btn btn-primary btn-large">
+                    <a href="mailto:contacto@aywin.cl" class="btn btn-primary btn-large" data-i18n="contact.btn">
                         Escríbenos a contacto@aywin.cl
                     </a>
                 </div>
-                <p class="contact-subtext">Respuesta directa en menos de 24 horas hábiles • Concepción, Chile (Atención remota a todo Chile y el extranjero)</p>
+                <p class="contact-subtext" data-i18n="contact.subtext">Respuesta directa en menos de 24 horas hábiles • Concepción, Chile (Atención remota a todo Chile y el extranjero)</p>
             </div>
         </div>
     </section>
@@ -419,32 +477,32 @@
         <div class="container footer-container">
             <div class="footer-col-brand">
                 <div class="brand-text">AYWIN <span>SOFTWARE</span></div>
-                <p class="footer-desc">
+                <p class="footer-desc" data-i18n="footer.desc">
                     Desarrollo de software a medida, aplicaciones móviles multiplataforma y consultoría tecnológica potenciada por Inteligencia Artificial.
                 </p>
-                <p class="footer-registered">
+                <p class="footer-registered" data-i18n="footer.domain">
                     Dominio oficial registrado: <strong>aywin.cl</strong>
                 </p>
             </div>
             <div class="footer-col-links">
-                <h4>Navegación</h4>
+                <h4 data-i18n="footer.nav_title">Navegación</h4>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#productos">Productos Propios</a></li>
-                    <li><a href="privacy.html">Políticas de Privacidad</a></li>
+                    <li><a href="#inicio" data-i18n="footer.nav_home">Inicio</a></li>
+                    <li><a href="#servicios" data-i18n="footer.nav_services">Servicios</a></li>
+                    <li><a href="#productos" data-i18n="footer.nav_products">Productos Propios</a></li>
+                    <li><a href="privacy.html" data-i18n="footer.nav_privacy">Políticas de Privacidad</a></li>
                 </ul>
             </div>
             <div class="footer-col-contact">
-                <h4>Contacto</h4>
+                <h4 data-i18n="footer.contact_title">Contacto</h4>
                 <p><a href="mailto:contacto@aywin.cl">contacto@aywin.cl</a></p>
-                <p class="location-text">Concepción, Región del Biobío, Chile</p>
+                <p class="location-text" data-i18n="footer.location">Concepción, Región del Biobío, Chile</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container bottom-bar">
-                <p>&copy; 2026 Aywin Software. Todos los derechos reservados.</p>
-                <p>Ingeniería de software, visión integral y calidad técnica.</p>
+                <p data-i18n="footer.rights">&copy; 2026 Aywin Software. Todos los derechos reservados.</p>
+                <p data-i18n="footer.tagline">Ingeniería de software, visión integral y calidad técnica.</p>
             </div>
         </div>
     </footer>
