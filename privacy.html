@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Políticas de Privacidad | Aywin Software</title>
-    <meta name="description" content="Política de privacidad oficial y términos de tratamiento de datos para las aplicaciones y servicios de Aywin Software.">
+    <title>Política de Privacidad | Aywin Software</title>
+    <meta name="description" content="Esta política aplica a las apps de Aywin Software listadas abajo: apps que funcionan sin conexión, sin anuncios y sin acceso a micrófono, cámara, fotos, ubicación ni contactos.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -170,6 +170,46 @@
             border-radius: 8px;
             margin: 28px 0;
         }
+        /* Bloques por idioma: i18n.js fija <html lang>, aquí se oculta el otro idioma */
+        html[lang="en"] [data-lang-block="es"],
+        html:not([lang="en"]) [data-lang-block="en"] {
+            display: none;
+        }
+        .policy-body h3 {
+            font-family: var(--font-heading);
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            margin: 24px 0 10px;
+        }
+        .policy-table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 28px;
+        }
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+        .policy-table th,
+        .policy-table td {
+            text-align: left;
+            vertical-align: top;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .policy-table th {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+        .policy-table td:first-child {
+            color: #FFFFFF;
+            font-weight: 600;
+            min-width: 8rem;
+        }
+        .policy-body a {
+            color: var(--accent-blue);
+        }
     </style>
 </head>
 <body>
@@ -208,73 +248,130 @@
 
     <!-- CUERPO DE LA POLÍTICA -->
     <main class="policy-container">
+        <div data-lang-block="es">
         <header class="policy-header">
-            <span class="section-tag" data-i18n="privacy.tag">LEGAL</span>
-            <h1 data-i18n="privacy.h1">Política de Privacidad</h1>
-            <p class="policy-meta" data-i18n="privacy.meta">Última actualización: Noviembre de 2026 • Aywin Software (Concepción, Chile)</p>
+            <span class="section-tag">LEGAL</span>
+            <h1>Política de Privacidad</h1>
+            <p class="policy-meta">Última actualización: 12 de noviembre de 2026 • Aywin Software (Concepción, Chile)</p>
         </header>
-
         <article class="policy-body">
-            <div class="policy-callout">
-                <p data-i18n="privacy.callout">
-                    Esta Política de Privacidad rige el tratamiento de la información y los datos en los productos de software, aplicaciones móviles, soluciones web y servicios desarrollados y publicados por <strong>Aywin Software</strong> a través de tiendas digitales (como Google Play Store) y sitios web asociados al dominio <strong>aywin.cl</strong>.
-                </p>
-            </div>
-
-            <h2 data-i18n="privacy.s1.h2">1. Compromiso de Privacidad y Recopilación</h2>
-            <p data-i18n="privacy.s1.p">
-                En Aywin Software aplicamos un principio estricto de <strong>minimización de datos y privacidad por diseño</strong>. Nuestras aplicaciones están diseñadas para funcionar de forma local (offline) siempre que sea posible, y <strong>no solicitan, registran ni almacenan información de identificación personal</strong> de los usuarios (como nombres reales, números telefónicos, direcciones domiciliarias o contactos del dispositivo).
-            </p>
-
-            <h2 data-i18n="privacy.s2.h2">2. Información Técnica Anonimizada</h2>
-            <p data-i18n="privacy.s2.p">
-                Para garantizar la estabilidad técnica, resolver errores y permitir la entrega de publicidad no intrusiva en aplicaciones gratuitas, podemos hacer uso de servicios estándar del ecosistema móvil:
-            </p>
-            <ul>
-                <li data-i18n="privacy.s2.li1"><strong>Diagnóstico de Fallos y Rendimiento:</strong> Datos anónimos sobre el modelo de dispositivo, arquitectura de procesador y versión de sistema operativo para resolver excepciones y optimizar el rendimiento.</li>
-                <li data-i18n="privacy.s2.li2"><strong>Redes Publicitarias de Terceros:</strong> En aplicaciones que integran publicidad (Google AdMob), las redes asociadas pueden procesar identificadores anónimos de publicidad móvil (AAID en Android / IDFA en iOS) conforme a las directrices de privacidad de Google.</li>
-            </ul>
-
-            <h2 data-i18n="privacy.s3.h2">3. Servicios Integrados de Terceros</h2>
-            <p data-i18n="privacy.s3.p">
-                Nuestros productos pueden enlazar con las siguientes plataformas oficiales:
-            </p>
-            <ul>
-                <li><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent-blue);" data-i18n="privacy.s3.li1">Políticas de Privacidad de Google Play Services</a></li>
-                <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" style="color: var(--accent-blue);" data-i18n="privacy.s3.li2">Políticas de Anuncios de Google AdMob</a></li>
-            </ul>
-
-            <h2 data-i18n="privacy.s4.h2">4. Permisos de Dispositivo</h2>
-            <p data-i18n="privacy.s4.p">
-                Nuestras aplicaciones únicamente declaran los permisos esenciales para su propósito funcional:
-            </p>
-            <ul>
-                <li data-i18n="privacy.s4.li1"><strong>Sensores de Movimiento (Acelerómetro / Giroscopio):</strong> Utilizados en herramientas interactivas para simular física en tiempo real. Los datos de sensores se procesan localmente en memoria y nunca se transmiten ni almacenan.</li>
-                <li data-i18n="privacy.s4.li2"><strong>Vibración / Retroalimentación Háptica:</strong> Para enriquecer la respuesta táctil al interactuar con controles visuales.</li>
-                <li data-i18n="privacy.s4.li3"><strong>Conectividad de Red:</strong> Para consultar el catálogo o cargar anuncios publicitarios autorizados.</li>
-            </ul>
-
-            <h2 data-i18n="privacy.s5.h2">5. Privacidad de Menores (COPPA / GDPR-K)</h2>
-            <p data-i18n="privacy.s5.p">
-                Nuestros productos no están dirigidos a recopilar información personal de menores de 13 años. Si detectamos que se ha procesado inadvertidamente información de un menor sin consentimiento parental demostrable, se eliminará de forma inmediata.
-            </p>
-
-            <h2 data-i18n="privacy.s6.h2">6. Almacenamiento Local de Preferencias</h2>
-            <p data-i18n="privacy.s6.p">
-                Las configuraciones de usuario, puntuaciones locales, preferencias de sonido y progresos se conservan exclusivamente en el almacenamiento seguro de la aplicación en el dispositivo del usuario. Al desinstalar la aplicación, todos estos datos locales se borran de manera definitiva.
-            </p>
-
-            <h2 data-i18n="privacy.s7.h2">7. Canal de Contacto Oficial</h2>
-            <p data-i18n="privacy.s7.p">
-                Para cualquier consulta relacionada con esta Política de Privacidad o el funcionamiento de nuestras aplicaciones, puede escribirnos directamente a:
-            </p>
-            <div class="policy-callout">
-                <p><strong>Aywin Software</strong></p>
-                <p><span data-i18n="privacy.s7.contact_label">Correo de contacto técnico y legal:</span> <a href="mailto:contacto@aywin.cl" style="color: var(--accent-blue);">contacto@aywin.cl</a></p>
-                <p><span data-i18n="privacy.s7.site_label">Sitio web:</span> <a href="https://aywin.cl" style="color: var(--accent-blue);">https://aywin.cl</a></p>
-                <p><span data-i18n="privacy.s7.location_label">Ubicación:</span> <span data-i18n="privacy.s7.location_val">Concepción, Región del Biobío, Chile</span></p>
-            </div>
+<div class="policy-callout"><p>Esta política aplica a las apps de Aywin Software listadas abajo: apps que funcionan sin conexión, sin anuncios y sin acceso a micrófono, cámara, fotos, ubicación ni contactos.</p></div>
+<h2>Resumen</h2>
+<p>Estas apps <strong>no recopilan, no envían y no comparten datos personales</strong>. No usan internet para su funcionamiento y no incluyen SDK de terceros de publicidad, analítica ni registro de fallos.</p>
+<p>No vendemos ni compartimos datos personales. No hay cuentas de usuario ni inicio de sesión.</p>
+<h2>Datos guardados en tu dispositivo</h2>
+<p>Lo que creas en la app (ajustes, progreso, registros, notas, listas, etc.) se guarda solo en el almacenamiento privado de la app en tu teléfono. No se envía al desarrollador ni a terceros, y el desarrollador no tiene acceso a ello. Se borra al desinstalar la app o al borrar sus datos desde los ajustes de Android.</p>
+<p>Si tienes activada la copia de seguridad de Android, el sistema puede incluir estos datos en la copia cifrada de tu cuenta de Google, gestionada por Google según su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad</a>.</p>
+<h2>Permisos que pueden usar</h2>
+<ul>
+<li><strong>Notificaciones</strong> (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>): solo si activas un recordatorio. Son notificaciones locales programadas en el teléfono; no hay notificaciones push ni servidores. El segundo permiso solo vuelve a programar el recordatorio después de reiniciar el teléfono.</li>
+<li><strong>Vibración</strong> (<code>VIBRATE</code>): respuesta háptica.</li>
+<li><strong>Reproducción en segundo plano</strong> (<code>FOREGROUND_SERVICE</code>, <code>WAKE_LOCK</code>): para que un sonido siga sonando con la pantalla apagada. Mientras suena se muestra una notificación multimedia.</li>
+</ul>
+<p>Ninguna de estas apps pide micrófono, cámara, fotos, ubicación, contactos ni acceso a archivos.</p>
+<h2>Exportar, compartir y portapapeles</h2>
+<p>Algunas apps permiten exportar una copia de seguridad, compartir una imagen o texto, o copiar datos al portapapeles. Esto solo ocurre cuando tú lo pides: la app crea el archivo o texto y abre la hoja de compartir del sistema, y tú decides dónde guardarlo o a quién enviarlo. La app no lo sube a ningún servidor. Al importar, la app solo lee el archivo o el portapapeles cuando pulsas el botón correspondiente.</p>
+<h2>Enlaces externos</h2>
+<p>Si una app abre un enlace, se abre en tu navegador y sale de la app; ese sitio tiene su propia política de privacidad.</p>
+<h2>Menores de edad</h2>
+<p>Las apps no están dirigidas a menores de 13 años y no recopilan datos de nadie, incluidos menores. Algunas tienen contenido para público adulto, indicado en la tabla y en su ficha de Google Play.</p>
+<h2>Apps cubiertas</h2>
+<div class="policy-table-wrap"><table class="policy-table"><thead><tr><th>App</th><th>Qué usa</th></tr></thead><tbody>
+<tr><td>AuraSync</td><td>Sin permisos.</td></tr>
+<tr><td>Baby Lullaby Dreams</td><td>Reproducción en segundo plano; recordatorio opcional; exportar/importar copia.</td></tr>
+<tr><td>Breathe Flow</td><td>Recordatorio opcional; vibración; compartir.</td></tr>
+<tr><td>Chaos Sigil Craft</td><td>Compartir imagen.</td></tr>
+<tr><td>Cuenta Justa CLP</td><td>Recordatorio opcional; exportar; abre enlaces en el navegador.</td></tr>
+<tr><td>CyberGrid</td><td>Sin permisos.</td></tr>
+<tr><td>El Gato Negro (The Black Cat)</td><td>Sin permisos. Contenido para mayores de 18 años.</td></tr>
+<tr><td>Impostor Latino</td><td>Recordatorio opcional; vibración; compartir.</td></tr>
+<tr><td>IronPacer</td><td>Recordatorio opcional; vibración; mantiene la pantalla encendida durante el temporizador.</td></tr>
+<tr><td>Life Ledger</td><td>Sin permisos.</td></tr>
+<tr><td>Marcador Universal (Universal Scorekeeper)</td><td>Recordatorio opcional; vibración; exportar.</td></tr>
+<tr><td>MemoSparks</td><td>Exportar/importar mediante el portapapeles.</td></tr>
+<tr><td>MoonSync</td><td>Recordatorio opcional; copiar resumen. Cálculos lunares en el dispositivo.</td></tr>
+<tr><td>Muerte Roja (Red Death)</td><td>Sin permisos. Contenido para mayores de 16 años.</td></tr>
+<tr><td>Neon Survivor</td><td>Sin permisos.</td></tr>
+<tr><td>Pocket Chibi Waifu</td><td>Sin permisos. Dirigida a público adulto.</td></tr>
+<tr><td>QuestLog RPG</td><td>Recordatorio opcional; vibración; respaldo JSON.</td></tr>
+<tr><td>SubTrack</td><td>Recordatorios de cobro opcionales; exportar CSV y respaldo.</td></tr>
+<tr><td>TCG Mana Lab</td><td>Copiar resultado al portapapeles.</td></tr>
+<tr><td>Vision Board</td><td>Recordatorio opcional; compartir imagen.</td></tr>
+</tbody></table></div>
+<h2>Contacto</h2>
+<p>Para cualquier consulta sobre esta política o sobre tus datos, escríbenos:</p>
+<div class="policy-callout">
+<p><strong>Aywin Software</strong></p>
+<p>Correo: <a href="mailto:soporte@aywin.cl">soporte@aywin.cl</a></p>
+<p>Sitio web: <a href="https://aywin.cl">https://aywin.cl</a></p>
+<p>Ubicación: Concepción, Región del Biobío, Chile</p>
+</div>
+<h2>Cambios en esta política</h2>
+<p>Si cambia lo que hace alguna app con los datos, actualizaremos esta página y la fecha de arriba antes de publicar esa versión.</p>
         </article>
+        </div>
+        <div data-lang-block="en">
+        <header class="policy-header">
+            <span class="section-tag">LEGAL</span>
+            <h1>Privacy Policy</h1>
+            <p class="policy-meta">Last updated: November 12, 2026 • Aywin Software (Concepción, Chile)</p>
+        </header>
+        <article class="policy-body">
+<div class="policy-callout"><p>This policy applies to the Aywin Software apps listed below: apps that work offline, without ads and without access to the microphone, camera, photos, location or contacts.</p></div>
+<h2>Summary</h2>
+<p>These apps <strong>do not collect, send or share personal data</strong>. They do not use the internet to work and do not include third-party advertising, analytics or crash-reporting SDKs.</p>
+<p>We do not sell or share personal data. There are no user accounts or sign-in.</p>
+<h2>Data stored on your device</h2>
+<p>What you create in the app (settings, progress, logs, notes, lists, etc.) is stored only in the app's private storage on your phone. It is not sent to the developer or to third parties, and the developer has no access to it. It is deleted when you uninstall the app or clear its data in Android settings.</p>
+<p>If Android backup is enabled, the system may include this data in your Google account's encrypted backup, managed by Google under its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p>
+<h2>Permissions they may use</h2>
+<ul>
+<li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code>, <code>RECEIVE_BOOT_COMPLETED</code>): only if you turn on a reminder. They are local notifications scheduled on the phone; there are no push notifications or servers. The second permission only reschedules the reminder after the phone restarts.</li>
+<li><strong>Vibration</strong> (<code>VIBRATE</code>): haptic feedback.</li>
+<li><strong>Background playback</strong> (<code>FOREGROUND_SERVICE</code>, <code>WAKE_LOCK</code>): so a sound keeps playing with the screen off. A media notification is shown while it plays.</li>
+</ul>
+<p>None of these apps request the microphone, camera, photos, location, contacts or file access.</p>
+<h2>Export, share and clipboard</h2>
+<p>Some apps let you export a backup, share an image or text, or copy data to the clipboard. This only happens when you ask for it: the app creates the file or text and opens the system share sheet, and you choose where to save it or whom to send it to. The app does not upload it to any server. When importing, the app only reads the file or clipboard when you tap the corresponding button.</p>
+<h2>External links</h2>
+<p>If an app opens a link, it opens in your browser and leaves the app; that site has its own privacy policy.</p>
+<h2>Children</h2>
+<p>The apps are not directed at children under 13 and do not collect data from anyone, including children. Some have content for adults, as shown in the table and on their Google Play listing.</p>
+<h2>Apps covered</h2>
+<div class="policy-table-wrap"><table class="policy-table"><thead><tr><th>App</th><th>What it uses</th></tr></thead><tbody>
+<tr><td>AuraSync</td><td>No permissions.</td></tr>
+<tr><td>Baby Lullaby Dreams</td><td>Background playback; optional reminder; export/import backup.</td></tr>
+<tr><td>Breathe Flow</td><td>Optional reminder; vibration; share.</td></tr>
+<tr><td>Chaos Sigil Craft</td><td>Share image.</td></tr>
+<tr><td>Cuenta Justa CLP</td><td>Optional reminder; export; opens links in the browser.</td></tr>
+<tr><td>CyberGrid</td><td>No permissions.</td></tr>
+<tr><td>El Gato Negro (The Black Cat)</td><td>No permissions. Content for ages 18+.</td></tr>
+<tr><td>Impostor Latino</td><td>Optional reminder; vibration; share.</td></tr>
+<tr><td>IronPacer</td><td>Optional reminder; vibration; keeps the screen on during the timer.</td></tr>
+<tr><td>Life Ledger</td><td>No permissions.</td></tr>
+<tr><td>Marcador Universal (Universal Scorekeeper)</td><td>Optional reminder; vibration; export.</td></tr>
+<tr><td>MemoSparks</td><td>Export/import via clipboard.</td></tr>
+<tr><td>MoonSync</td><td>Optional reminder; copy summary. Moon calculations on device.</td></tr>
+<tr><td>Muerte Roja (Red Death)</td><td>No permissions. Content for ages 16+.</td></tr>
+<tr><td>Neon Survivor</td><td>No permissions.</td></tr>
+<tr><td>Pocket Chibi Waifu</td><td>No permissions. Intended for adults.</td></tr>
+<tr><td>QuestLog RPG</td><td>Optional reminder; vibration; JSON backup.</td></tr>
+<tr><td>SubTrack</td><td>Optional billing reminders; CSV export and backup.</td></tr>
+<tr><td>TCG Mana Lab</td><td>Copy result to clipboard.</td></tr>
+<tr><td>Vision Board</td><td>Optional reminder; share image.</td></tr>
+</tbody></table></div>
+<h2>Contact</h2>
+<p>For any question about this policy or your data, email us:</p>
+<div class="policy-callout">
+<p><strong>Aywin Software</strong></p>
+<p>Email: <a href="mailto:soporte@aywin.cl">soporte@aywin.cl</a></p>
+<p>Website: <a href="https://aywin.cl">https://aywin.cl</a></p>
+<p>Location: Concepción, Biobío Region, Chile</p>
+</div>
+<h2>Changes to this policy</h2>
+<p>If what an app does with data changes, we will update this page and the date above before releasing that version.</p>
+        </article>
+        </div>
     </main>
 
     <!-- FOOTER -->
