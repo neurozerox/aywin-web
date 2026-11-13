@@ -912,3 +912,107 @@ body {
         text-align: center;
     }
 }
+
+/* ==========================================================================
+   EXPERIENCIA
+   ========================================================================== */
+
+.experience-section {
+    padding: 95px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 56px;
+}
+
+.stat-tile {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 28px 26px;
+    text-align: center;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.exp-block {
+    margin-top: 44px;
+}
+
+.exp-block h3 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip-row span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+}
+
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.stack-group {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 22px 22px 24px;
+}
+
+/* Si el número de grupos es impar, el último ocupa todo el ancho */
+.stack-group:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
+.stack-group h4 {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+@media (max-width: 860px) {
+    .stats-grid,
+    .stack-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-grid {
+        gap: 14px;
+    }
+    .stat-value {
+        font-size: 2.3rem;
+    }
+}
