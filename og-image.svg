@@ -58,7 +58,7 @@
   <text x="100" y="365" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="url(#textGrad)">potenciada por inteligencia artificial.</text>
 
   <!-- Subtitle -->
-  <text x="100" y="425" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="400" fill="#CBD5E1">17+ años de experiencia • QA y automatización • Apps móviles • Agentes de IA</text>
+  <text x="100" y="425" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="400" fill="#CBD5E1">18+ años de experiencia • QA y automatización • Apps móviles • Agentes de IA</text>
 
   <!-- Capability Pills -->
   <g transform="translate(100, 485)">
