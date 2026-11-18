@@ -178,6 +178,12 @@ body {
     font-weight: 800;
 }
 
+/* En la landing (/ y /en/) los botones de idioma son enlaces entre páginas */
+a.lang-btn {
+    text-decoration: none;
+    display: inline-block;
+}
+
 .lang-divider {
     color: var(--border-subtle);
     font-size: 0.72rem;

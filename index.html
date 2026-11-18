@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-mode="static">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CEL4YS32C"></script>
@@ -19,6 +19,9 @@
     <meta name="author" content="Aywin Software">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://aywin.cl/">
+    <link rel="alternate" hreflang="es" href="https://aywin.cl/">
+    <link rel="alternate" hreflang="en" href="https://aywin.cl/en/">
+    <link rel="alternate" hreflang="x-default" href="https://aywin.cl/">
 
     <!-- Geolocalización SEO (Concepción, Región del Biobío, Chile) -->
     <meta name="geo.region" content="CL-BI">
@@ -90,10 +93,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
         <meta name="theme-color" content="#141A28">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css?v=1.4">
-    <script src="i18n.js?v=1.5" defer></script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles.css?v=1.5">
+    <script src="/i18n.js?v=1.6" defer></script>
 </head>
 <body>
 
@@ -122,9 +125,9 @@
             </nav>
             <div class="nav-actions">
                 <div class="lang-switch" id="langSwitch" role="group" aria-label="Cambiar idioma / Switch language">
-                    <button type="button" class="lang-btn active" data-lang="es" title="Español" aria-pressed="true">ES</button>
+                    <a class="lang-btn active" href="/" hreflang="es" lang="es" data-lang="es" title="Español" aria-current="page">ES</a>
                     <span class="lang-divider" aria-hidden="true">|</span>
-                    <button type="button" class="lang-btn" data-lang="en" title="English" aria-pressed="false">EN</button>
+                    <a class="lang-btn" href="/en/" hreflang="en" lang="en" data-lang="en" title="English">EN</a>
                 </div>
                 <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="navLinks">
                     <span></span>
@@ -466,7 +469,7 @@
                 <p><a href="mailto:contacto@aywin.cl">contacto@aywin.cl</a></p>
                 <p class="location-text" data-i18n="footer.location">Concepción, Región del Biobío, Chile</p>
                 <p class="footer-support"><span data-i18n="footer.support">Soporte de apps:</span> <a href="mailto:soporte@aywin.cl">soporte@aywin.cl</a></p>
-                <p class="footer-support"><a href="privacy.html" data-i18n="footer.privacy">Políticas de privacidad de las apps</a></p>
+                <p class="footer-support"><a href="/privacy.html" data-i18n="footer.privacy">Políticas de privacidad de las apps</a></p>
             </div>
         </div>
         <div class="footer-bottom">

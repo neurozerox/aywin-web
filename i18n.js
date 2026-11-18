@@ -322,13 +322,36 @@ function applyLanguage(lang) {
     btn.setAttribute('aria-pressed', String(isActive));
   });
 
+  // Enlaces a la landing: apuntan a la versión del idioma activo (/ o /en/)
+  document.querySelectorAll('a[href^="index.html"], a[data-home-href]').forEach(a => {
+    if (!a.dataset.homeHref) a.dataset.homeHref = a.getAttribute('href');
+    const hash = a.dataset.homeHref.replace(/^index\.html/, '');
+    a.setAttribute('href', (lang === 'en' ? '/en/' : '/') + hash);
+  });
+
   // Guardar preferencia
   try {
     localStorage.setItem('aywin_lang', lang);
   } catch (e) {}
 }
 
+function savePreference(lang) {
+  try {
+    localStorage.setItem('aywin_lang', lang);
+  } catch (e) {}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Landing (/ y /en/): cada idioma es una página estática indexable. No se
+  // traduce en el navegador; los botones ES/EN son enlaces y solo se recuerda
+  // la elección para las páginas de privacidad.
+  if (document.documentElement.dataset.i18nMode === 'static') {
+    document.querySelectorAll('a.lang-btn').forEach(link => {
+      link.addEventListener('click', () => savePreference(link.getAttribute('data-lang')));
+    });
+    return;
+  }
+
   // Determinar idioma inicial: preferencia guardada > navegador en inglés > español por defecto
   let initialLang = 'es';
   try {
