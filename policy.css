@@ -1,0 +1,95 @@
+/* Estilos compartidos de las páginas de política de privacidad (privacy*.html) */
+
+.policy-container {
+    max-width: 820px;
+    margin: 80px auto 120px;
+    padding: 0 24px;
+}
+.policy-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.policy-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.policy-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.policy-body {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+.policy-body h2 {
+    font-family: var(--font-heading);
+    color: #FFFFFF;
+    font-size: 1.35rem;
+    margin: 36px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.policy-body p {
+    margin-bottom: 18px;
+}
+.policy-body ul {
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+.policy-body li {
+    margin-bottom: 8px;
+}
+.policy-body strong {
+    color: #FFFFFF;
+}
+.policy-callout {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 24px;
+    border-radius: 8px;
+    margin: 28px 0;
+}
+/* Bloques por idioma: i18n.js fija <html lang>, aquí se oculta el otro idioma */
+html[lang="en"] [data-lang-block="es"],
+html:not([lang="en"]) [data-lang-block="en"] {
+    display: none;
+}
+.policy-body h3 {
+    font-family: var(--font-heading);
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    margin: 24px 0 10px;
+}
+.policy-table-wrap {
+    overflow-x: auto;
+    margin: 16px 0 28px;
+}
+.policy-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+.policy-table th,
+.policy-table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.policy-table th {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+.policy-table td:first-child {
+    color: #FFFFFF;
+    font-weight: 600;
+    min-width: 8rem;
+}
+.policy-body a {
+    color: var(--accent-cyan);
+}

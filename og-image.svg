@@ -50,15 +50,15 @@
 
   <!-- Brand Title -->
   <text x="225" y="158" font-family="'Space Grotesk', system-ui, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="3">AYWIN</text>
-  <text x="360" y="158" font-family="'Space Grotesk', system-ui, sans-serif" font-size="34" font-weight="500" fill="#38BDF8" letter-spacing="3">SOFTWARE</text>
-  <text x="225" y="195" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#94A3B8" letter-spacing="1">CONCEPCIÓN, CHILE • ESTUDIO DE INGENIERÍA &amp; PRODUCTOS</text>
+  <text x="372" y="158" font-family="'Space Grotesk', system-ui, sans-serif" font-size="34" font-weight="500" fill="#38BDF8" letter-spacing="3">SOFTWARE</text>
+  <text x="225" y="195" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#94A3B8" letter-spacing="1">CONCEPCIÓN, CHILE • ESTUDIO DE INGENIERÍA Y PRODUCTOS</text>
 
   <!-- Main Headline -->
   <text x="100" y="300" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="#FFFFFF">Ingeniería de software robusta,</text>
-  <text x="100" y="365" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="url(#textGrad)">potenciada por Inteligencia Artificial.</text>
+  <text x="100" y="365" font-family="'Space Grotesk', system-ui, sans-serif" font-size="52" font-weight="700" fill="url(#textGrad)">potenciada por inteligencia artificial.</text>
 
   <!-- Subtitle -->
-  <text x="100" y="425" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="400" fill="#CBD5E1">17+ años de trayectoria • QA Lead • Desarrollo Móvil • Agentes de IA</text>
+  <text x="100" y="425" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="400" fill="#CBD5E1">17+ años de experiencia • QA y automatización • Apps móviles • Agentes de IA</text>
 
   <!-- Capability Pills -->
   <g transform="translate(100, 485)">
