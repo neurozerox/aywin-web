@@ -95,8 +95,8 @@
         <meta name="theme-color" content="#141A28">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="/styles.css?v=1.5">
-    <script src="/i18n.js?v=1.6" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=1.7">
+    <script src="/i18n.js?v=1.13" defer></script>
 </head>
 <body>
 
@@ -189,7 +189,7 @@
                 <div class="service-card">
                     <div class="service-icon-box" aria-hidden="true">🧠</div>
                     <h3 data-i18n="services.ai.title">Soluciones con inteligencia artificial</h3>
-                    <p data-i18n="services.ai.desc">Integramos modelos de lenguaje (LLM), automatizaciones y agentes inteligentes en procesos y productos reales, acortando los plazos de desarrollo sin renunciar a la revisión técnica de cada entrega.</p>
+                    <p data-i18n="services.ai.desc">Diseñamos e integramos soluciones con modelos de lenguaje (LLM): agentes autónomos con skills y herramientas propias, orquestación de subagentes que se reparten el trabajo en paralelo y automatizaciones conectadas a tus sistemas. Los agentes resuelven solos lo operativo y una persona aprueba las decisiones que importan.</p>
                 </div>
 
                 <div class="service-card">
@@ -207,7 +207,7 @@
                 <div class="service-card">
                     <div class="service-icon-box" aria-hidden="true">⚡</div>
                     <h3 data-i18n="services.automation.title">Automatización de pruebas y rendimiento</h3>
-                    <p data-i18n="services.automation.desc">Suites de pruebas automatizadas para web, móvil y API, integradas a tu flujo de desarrollo, y pruebas de carga y rendimiento para conocer los límites de tu sistema antes que tus usuarios.</p>
+                    <p data-i18n="services.automation.desc">Suites de pruebas automatizadas para web, móvil y API, integradas a tu flujo de desarrollo. Además, pruebas de carga y rendimiento para conocer los límites de tu sistema antes que tus usuarios.</p>
                 </div>
 
                 <div class="service-card">
@@ -238,15 +238,16 @@
                         <span class="platform-pill" data-i18n="product.aita.platform">CLI + web (Streamlit)</span>
                     </div>
                     <h3 data-i18n="product.aita.title">AITA-QA</h3>
-                    <p class="card-subtitle" data-i18n="product.aita.subtitle">Plataforma de QA con agentes de IA: revisión de entregas y pruebas automatizadas con Playwright</p>
-                    <p class="card-description" data-i18n="product.aita.desc">
-                        Plataforma de aseguramiento de calidad basada en agentes de IA (Claude, Gemini y modelos locales). Se integra con Jira y GitLab para clasificar entregas, revisar código con evidencia real y generar automáticamente Page Object Models (POM) para Playwright. Ejecuta pruebas de regresión con auto-reparación (self-healing), para evitar que una nueva entrega rompa lo que ya funcionaba.
-                    </p>
+                    <p class="card-subtitle" data-i18n="product.aita.subtitle">Plataforma de aseguramiento de calidad basada en agentes de IA orquestados</p>
+                    <div class="card-description" data-i18n="product.aita.desc">
+                        <p>Un agente coordinador trabaja con skills por proceso (triage, revisión QA, pruebas en paralelo, paso a producción) y delega en subagentes especializados para revisiones y auditoría antes de su publicación.</p><p>Ejecuta pruebas E2E y guarda evidencia del antes y el después. Trabaja de forma autónoma, con aprobación humana en cada acción con impacto.</p><p>Apoyo a QA: Análisis de entregas, generación de casos de prueba, herramientas de gestión, seguimiento, métricas de calidad.</p>
+                    </div>
                     <div class="card-badges">
-                        <span data-i18n="product.aita.b1">Agentes de IA y skills</span>
+                        <span data-i18n="product.aita.b1">Agentes y subagentes orquestados</span>
                         <span data-i18n="product.aita.b2">Multi-LLM (Claude / Gemini / Ollama)</span>
-                        <span data-i18n="product.aita.b3">Playwright + self-healing</span>
-                        <span data-i18n="product.aita.b4">Integración con Jira y GitLab</span>
+                        <span data-i18n="product.aita.b3">Playwright MCP + self-healing</span>
+                        <span data-i18n="product.aita.b4">Aprobación humana en puntos clave</span>
+                        <span data-i18n="product.aita.b5">Integración con Jira y GitLab</span>
                     </div>
                 </div>
 
@@ -258,9 +259,9 @@
                     </div>
                     <h3 data-i18n="product.subtrack.title">SubTrack</h3>
                     <p class="card-subtitle" data-i18n="product.subtrack.subtitle">Gestor de suscripciones y gastos fijos</p>
-                    <p class="card-description" data-i18n="product.subtrack.desc">
-                        Registra cada suscripción o gasto fijo con su monto, moneda y ciclo de cobro (de semanal a anual), y SubTrack calcula tu gasto mensual, anual proyectado y diario en una moneda base. Avisa antes de cada cobro y antes de que termine una prueba gratuita, proyecta los próximos 12 meses y guarda el historial de pagos. Sin cuentas, sin conexión a bancos y sin internet: los datos nunca salen del teléfono.
-                    </p>
+                    <div class="card-description" data-i18n="product.subtrack.desc">
+                        <p>Registra cada suscripción o gasto fijo con su monto, moneda y ciclo de cobro (de semanal a anual). SubTrack calcula tu gasto mensual, anual proyectado y diario en una moneda base.</p><p>Avisa antes de cada cobro y antes de que termine una prueba gratuita, proyecta los próximos 12 meses y guarda el historial de pagos.</p><p>Sin cuentas, sin conexión a bancos y sin internet: los datos nunca salen del teléfono.</p>
+                    </div>
                     <div class="card-badges">
                         <span data-i18n="product.subtrack.b1">Flutter</span>
                         <span data-i18n="product.subtrack.b2">Recordatorios de cobro</span>
@@ -277,9 +278,9 @@
                     </div>
                     <h3 data-i18n="product.library.title">HomeLib</h3>
                     <p class="card-subtitle" data-i18n="product.library.subtitle">Catálogo de la biblioteca de tu hogar y control de préstamos</p>
-                    <p class="card-description" data-i18n="product.library.desc">
-                        Escribe el ISBN y la app completa título, autor y portada desde Open Library o Google Books, validando ISBN-10/13 y avisando si el libro ya está registrado. Guarda la ubicación exacta de cada libro (sala, mueble y nivel), su dueño y a quién lo prestaste, con fecha de devolución y aviso de préstamos vencidos. Suma estados de lectura, calificaciones, estadísticas y exportación a Excel.
-                    </p>
+                    <div class="card-description" data-i18n="product.library.desc">
+                        <p>Escribe el ISBN y la app completa título, autor y portada desde Open Library o Google Books, validando ISBN-10/13 y avisando si el libro ya está registrado.</p><p>Guarda la ubicación exacta de cada libro (sala, mueble y nivel), su dueño y a quién lo prestaste, con fecha de devolución y aviso de préstamos vencidos.</p><p>Suma estados de lectura, calificaciones, estadísticas y exportación a Excel.</p>
+                    </div>
                     <div class="card-badges">
                         <span data-i18n="product.library.b1">Flutter</span>
                         <span data-i18n="product.library.b2">Búsqueda por ISBN</span>
@@ -296,9 +297,9 @@
                     </div>
                     <h3 data-i18n="product.breathe.title">Breathe Flow</h3>
                     <p class="card-subtitle" data-i18n="product.breathe.subtitle">Guía de respiración consciente</p>
-                    <p class="card-description" data-i18n="product.breathe.desc">
-                        Un círculo animado marca cuándo inhalar, sostener y exhalar, con una vibración distinta en cada fase para practicar con los ojos cerrados. Incluye respiración cuadrada (4-4-4-4), 4-7-8, respiración coherente (5,5 s) y un ritmo personalizado, sesiones de 2 a 10 minutos, rachas e historial de práctica. Sin cuentas, sin anuncios y sin internet.
-                    </p>
+                    <div class="card-description" data-i18n="product.breathe.desc">
+                        <p>Un círculo animado marca cuándo inhalar, sostener y exhalar, con una vibración distinta en cada fase para practicar con los ojos cerrados.</p><p>Incluye respiración cuadrada (4-4-4-4), 4-7-8, respiración coherente (5,5 s) y un ritmo personalizado, sesiones de 2 a 10 minutos, rachas e historial de práctica.</p><p>Sin cuentas, sin anuncios y sin internet.</p>
+                    </div>
                     <div class="card-badges">
                         <span data-i18n="product.breathe.b1">Flutter</span>
                         <span data-i18n="product.breathe.b2">Vibración por fase</span>
@@ -334,14 +335,14 @@
                         <div class="item-num">02</div>
                         <div>
                             <h4 data-i18n="diff.item2.title">Calidad (QA) desde el inicio</h4>
-                            <p data-i18n="diff.item2.desc">Cada funcionalidad se diseña pensando en su estabilidad y usabilidad, y en prevenir fallos antes de que lleguen a producción.</p>
+                            <p data-i18n="diff.item2.desc">Cada funcionalidad se diseña pensando en su estabilidad, en su usabilidad y en prevenir fallos antes de que lleguen a producción.</p>
                         </div>
                     </div>
                     <div class="approach-item">
                         <div class="item-num">03</div>
                         <div>
                             <h4 data-i18n="diff.item3.title">Desarrollo acelerado con IA</h4>
-                            <p data-i18n="diff.item3.desc">Usamos la inteligencia artificial como multiplicador de productividad para acortar los plazos de entrega, con revisión técnica y sin descuidar la arquitectura.</p>
+                            <p data-i18n="diff.item3.desc">Trabajamos con agentes de IA orquestados: un agente coordinador, subagentes especializados y revisiones automáticas antes de cada entrega. Así acortamos los plazos, con aprobación humana en los puntos clave y sin descuidar la arquitectura.</p>
                         </div>
                     </div>
                 </div>
@@ -355,7 +356,7 @@
             <div class="section-header text-center">
                 <span class="section-tag" data-i18n="exp.tag">EXPERIENCIA</span>
                 <h2 data-i18n="exp.title">La experiencia detrás de Aywin</h2>
-                <p data-i18n="exp.subtitle">Aywin es un estudio joven, pero quienes lo formamos no partimos de cero: traemos años de trabajo en proyectos de desarrollo, QA y soporte, muchos de ellos sobre sistemas críticos en producción.</p>
+                <p data-i18n="exp.subtitle">Aywin es un estudio joven, pero quienes lo formamos no partimos de cero: traemos años de trabajo en proyectos de desarrollo, QA y mantención de software, muchos de ellos sobre sistemas críticos en producción.</p>
             </div>
 
             <div class="stats-grid">
@@ -413,7 +414,7 @@
                     <div class="stack-group">
                         <h4 data-i18n="exp.stack.ai">IA aplicada</h4>
                         <div class="chip-row">
-                            <span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>DeepSeek</span><span>Ollama</span><span data-i18n="exp.stack.agents">Agentes de código</span><span data-i18n="exp.stack.llm">Integración de LLMs</span>
+                            <span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>DeepSeek</span><span>Ollama</span><span data-i18n="exp.stack.agents">Agentes de código</span><span data-i18n="exp.stack.orchestration">Orquestación de agentes</span><span data-i18n="exp.stack.subagents">Subagentes</span><span>Skills</span><span>MCP</span><span data-i18n="exp.stack.llm">Integración de LLMs</span>
                         </div>
                     </div>
                     <div class="stack-group">

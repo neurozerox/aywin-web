@@ -96,8 +96,8 @@
         <meta name="theme-color" content="#141A28">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="stylesheet" href="/styles.css?v=1.5">
-    <script src="/i18n.js?v=1.6" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=1.7">
+    <script src="/i18n.js?v=1.13" defer></script>
 </head>
 <body>
 
@@ -151,7 +151,9 @@
                 <span data-i18n="hero.title_p1">Robust software engineering,</span> <br>
                 <span class="gradient-text" data-i18n="hero.title_p2">powered by artificial intelligence.</span>
             </h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">Over 18 years leading software development, project management and quality assurance (QA). Today we build mobile apps, custom systems and AI-powered solutions, combining the speed of modern tooling with the rigor of proven engineering practice.</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
+                Over 18 years leading software development, project management and quality assurance (QA). Today we build mobile apps, custom systems and AI-powered solutions, combining the speed of modern tooling with the rigor of proven engineering practice.
+            </p>
             <div class="hero-actions">
                 <a href="#contacto" class="btn btn-primary" data-i18n="hero.btn_project">Start a project</a>
                 <a href="#productos" class="btn btn-secondary" data-i18n="hero.btn_portfolio">See our products</a>
@@ -188,7 +190,7 @@
                 <div class="service-card">
                     <div class="service-icon-box" aria-hidden="true">🧠</div>
                     <h3 data-i18n="services.ai.title">AI-powered solutions</h3>
-                    <p data-i18n="services.ai.desc">We integrate large language models (LLMs), automation and intelligent agents into real processes and products, shortening development time without giving up technical review of every delivery.</p>
+                    <p data-i18n="services.ai.desc">We design and integrate solutions built on large language models (LLMs): autonomous agents with their own skills and tools, orchestrated subagents that split the work in parallel, and automation connected to your systems. Agents handle the operational work on their own, and a person approves the decisions that matter.</p>
                 </div>
 
                 <div class="service-card">
@@ -237,13 +239,16 @@
                         <span class="platform-pill" data-i18n="product.aita.platform">CLI + web (Streamlit)</span>
                     </div>
                     <h3 data-i18n="product.aita.title">AITA-QA</h3>
-                    <p class="card-subtitle" data-i18n="product.aita.subtitle">AI-agent QA platform: delivery review and automated Playwright testing</p>
-                    <p class="card-description" data-i18n="product.aita.desc">Quality assurance platform built on AI agents (Claude, Gemini and local models). It integrates with Jira and GitLab to triage deliveries, review code with real evidence and automatically generate Playwright Page Object Models (POM). It runs self-healing regression tests to keep new releases from breaking what already works.</p>
+                    <p class="card-subtitle" data-i18n="product.aita.subtitle">Quality assurance platform built on orchestrated AI agents</p>
+                    <div class="card-description" data-i18n="product.aita.desc">
+                        <p>A coordinating agent works with per-process skills (triage, QA review, parallel testing, production release) and delegates to specialized subagents for reviews and auditing before publication.</p><p>It runs E2E tests, keeps before-and-after evidence, and works autonomously with human approval for every action that has impact.</p><p>QA support: delivery analysis, test case generation, management tools, tracking, quality metrics.</p>
+                    </div>
                     <div class="card-badges">
-                        <span data-i18n="product.aita.b1">AI agents & skills</span>
+                        <span data-i18n="product.aita.b1">Orchestrated agents & subagents</span>
                         <span data-i18n="product.aita.b2">Multi-LLM (Claude / Gemini / Ollama)</span>
-                        <span data-i18n="product.aita.b3">Playwright + self-healing</span>
-                        <span data-i18n="product.aita.b4">Jira & GitLab integration</span>
+                        <span data-i18n="product.aita.b3">Playwright MCP + self-healing</span>
+                        <span data-i18n="product.aita.b4">Human approval at key points</span>
+                        <span data-i18n="product.aita.b5">Jira & GitLab integration</span>
                     </div>
                 </div>
 
@@ -255,7 +260,9 @@
                     </div>
                     <h3 data-i18n="product.subtrack.title">SubTrack</h3>
                     <p class="card-subtitle" data-i18n="product.subtrack.subtitle">Subscription and fixed-cost tracker</p>
-                    <p class="card-description" data-i18n="product.subtrack.desc">Log each subscription or fixed cost with its amount, currency and billing cycle (weekly to yearly), and SubTrack works out your monthly, projected yearly and daily spend in a base currency. It reminds you before each charge and before a free trial ends, charts the next 12 months and keeps a payment history. No accounts, no bank connections and no internet: your data never leaves the phone.</p>
+                    <div class="card-description" data-i18n="product.subtrack.desc">
+                        <p>Log each subscription or fixed cost with its amount, currency and billing cycle (weekly to yearly), and SubTrack works out your monthly, projected yearly and daily spend in a base currency.</p><p>It reminds you before each charge and before a free trial ends, charts the next 12 months and keeps a payment history.</p><p>No accounts, no bank connections and no internet: your data never leaves the phone.</p>
+                    </div>
                     <div class="card-badges">
                         <span data-i18n="product.subtrack.b1">Flutter</span>
                         <span data-i18n="product.subtrack.b2">Charge reminders</span>
@@ -272,7 +279,9 @@
                     </div>
                     <h3 data-i18n="product.library.title">HomeLib</h3>
                     <p class="card-subtitle" data-i18n="product.library.subtitle">Home library catalog and lending tracker</p>
-                    <p class="card-description" data-i18n="product.library.desc">Type an ISBN and the app fills in title, author and cover from Open Library or Google Books, validating ISBN-10/13 and warning about duplicates. It records each book's exact location (room, bookcase and shelf), its owner and who borrowed it, with return-by dates and overdue alerts. Reading status, ratings, statistics and Excel export round it out.</p>
+                    <div class="card-description" data-i18n="product.library.desc">
+                        <p>Type an ISBN and the app fills in title, author and cover from Open Library or Google Books, validating ISBN-10/13 and warning about duplicates.</p><p>It records each book's exact location (room, bookcase and shelf), its owner and who borrowed it, with return-by dates and overdue alerts.</p><p>Reading status, ratings, statistics and Excel export round it out.</p>
+                    </div>
                     <div class="card-badges">
                         <span data-i18n="product.library.b1">Flutter</span>
                         <span data-i18n="product.library.b2">ISBN lookup</span>
@@ -289,7 +298,9 @@
                     </div>
                     <h3 data-i18n="product.breathe.title">Breathe Flow</h3>
                     <p class="card-subtitle" data-i18n="product.breathe.subtitle">Guided breathing companion</p>
-                    <p class="card-description" data-i18n="product.breathe.desc">An animated circle shows when to inhale, hold and exhale, with a distinct vibration at each phase so you can practice with your eyes closed. It includes box breathing (4-4-4-4), 4-7-8, coherent breathing (5.5 s) and a custom rhythm, 2 to 10 minute sessions, streaks and a practice history. No accounts, no ads and no internet.</p>
+                    <div class="card-description" data-i18n="product.breathe.desc">
+                        <p>An animated circle shows when to inhale, hold and exhale, with a distinct vibration at each phase so you can practice with your eyes closed.</p><p>It includes box breathing (4-4-4-4), 4-7-8, coherent breathing (5.5 s) and a custom rhythm, 2 to 10 minute sessions, streaks and a practice history.</p><p>No accounts, no ads and no internet.</p>
+                    </div>
                     <div class="card-badges">
                         <span data-i18n="product.breathe.b1">Flutter</span>
                         <span data-i18n="product.breathe.b2">Phase vibration</span>
@@ -309,7 +320,9 @@
                 <div class="approach-lead">
                     <span class="section-tag" data-i18n="diff.tag">OUR APPROACH</span>
                     <h2 data-i18n="diff.title">A complete view of software, from code to business</h2>
-                    <p data-i18n="diff.lead">Beyond writing code, we understand the full lifecycle of a digital product: business vision, team management, development and final quality control. AI speeds up the work; experience decides what to build and how to validate it.</p>
+                    <p data-i18n="diff.lead">
+                        Beyond writing code, we understand the full lifecycle of a digital product: business vision, team management, development and final quality control. AI speeds up the work; experience decides what to build and how to validate it.
+                    </p>
                 </div>
                 <div class="approach-items">
                     <div class="approach-item">
@@ -330,7 +343,7 @@
                         <div class="item-num">03</div>
                         <div>
                             <h4 data-i18n="diff.item3.title">AI-accelerated development</h4>
-                            <p data-i18n="diff.item3.desc">We use AI as a productivity multiplier to shorten delivery times, with technical review and without compromising architecture.</p>
+                            <p data-i18n="diff.item3.desc">We work with orchestrated AI agents: a coordinating agent, specialized subagents and automated reviews before every delivery. That is how we shorten delivery times, with human approval at key points and without compromising architecture.</p>
                         </div>
                     </div>
                 </div>
@@ -344,7 +357,7 @@
             <div class="section-header text-center">
                 <span class="section-tag" data-i18n="exp.tag">EXPERIENCE</span>
                 <h2 data-i18n="exp.title">The experience behind Aywin</h2>
-                <p data-i18n="exp.subtitle">Aywin is a young studio, but the people behind it are not starting from scratch: we bring years of work on development, QA and support projects, many of them on business-critical production systems.</p>
+                <p data-i18n="exp.subtitle">Aywin is a young studio, but the people behind it are not starting from scratch: we bring years of work on development, QA and software maintenance projects, many of them on business-critical production systems.</p>
             </div>
 
             <div class="stats-grid">
@@ -402,7 +415,7 @@
                     <div class="stack-group">
                         <h4 data-i18n="exp.stack.ai">Applied AI</h4>
                         <div class="chip-row">
-                            <span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>DeepSeek</span><span>Ollama</span><span data-i18n="exp.stack.agents">Coding agents</span><span data-i18n="exp.stack.llm">LLM integration</span>
+                            <span>Claude</span><span>Gemini</span><span>ChatGPT</span><span>DeepSeek</span><span>Ollama</span><span data-i18n="exp.stack.agents">Coding agents</span><span data-i18n="exp.stack.orchestration">Agent orchestration</span><span data-i18n="exp.stack.subagents">Subagents</span><span>Skills</span><span>MCP</span><span data-i18n="exp.stack.llm">LLM integration</span>
                         </div>
                     </div>
                     <div class="stack-group">
@@ -424,7 +437,9 @@
                 <h2 data-i18n="contact.title">Have a project in mind?</h2>
                 <p data-i18n="contact.subtitle">Whether it's a mobile app, a custom system, a QA and test automation strategy or technical leadership for your project, let's talk.</p>
                 <div class="contact-action-row">
-                    <a href="mailto:contacto@aywin.cl" class="btn btn-primary btn-large" data-i18n="contact.btn">Email us at contacto@aywin.cl</a>
+                    <a href="mailto:contacto@aywin.cl" class="btn btn-primary btn-large" data-i18n="contact.btn">
+                        Email us at contacto@aywin.cl
+                    </a>
                 </div>
                 <p class="contact-subtext" data-i18n="contact.subtext">We reply within 24 business hours • Concepción, Chile • Remote service in Chile and abroad</p>
             </div>
@@ -438,7 +453,9 @@
         <div class="container footer-container">
             <div class="footer-col-brand">
                 <div class="brand-text">AYWIN <span>SOFTWARE</span></div>
-                <p class="footer-desc" data-i18n="footer.desc">Custom software development, cross-platform mobile apps, quality assurance and AI-powered technology consulting.</p>
+                <p class="footer-desc" data-i18n="footer.desc">
+                    Custom software development, cross-platform mobile apps, quality assurance and AI-powered technology consulting.
+                </p>
             </div>
             <div class="footer-col-links">
                 <h4 data-i18n="footer.nav_title">Navigation</h4>
