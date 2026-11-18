@@ -149,7 +149,6 @@ const translations = {
     "exp.stack.remote": "Equipos remotos",
 
     "footer.support": "Soporte de apps:",
-    "footer.privacy": "Políticas de privacidad de las apps",
     "a11y.skip": "Saltar al contenido",
     "notfound.title": "Página no encontrada",
     "notfound.desc": "La dirección que buscas no existe o fue movida.",
@@ -301,7 +300,6 @@ const translations = {
     "exp.stack.remote": "Remote teams",
 
     "footer.support": "App support:",
-    "footer.privacy": "App privacy policies",
     "a11y.skip": "Skip to content",
     "notfound.title": "Page not found",
     "notfound.desc": "The page you are looking for does not exist or has been moved.",
